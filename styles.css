@@ -1,17 +1,10 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-}
-
-/* Page Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #FFCCCC; /* Light Red background color for the entire page */
+    background-color: #FFCCCC;
 }
 
 .header {
-    background-color: #FF0000; /* Red background color for the header */
+    background-color: red;
     color: #fff;
     padding: 20px 0;
 }
@@ -50,7 +43,7 @@ body {
 }
 
 .hero {
-    background-image: url('college-image.jpg');
+    background-image: url('https://images.pexels.com/photos/207684/pexels-photo-207684.jpeg?cs=srgb&dl=pexels-pixabay-207684.jpg&fm=jpg');
     background-size: cover;
     background-position: center;
     color: #fff;
@@ -71,7 +64,7 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FF0000; /* Red background color for buttons */
+    background-color: #FF0000;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -80,7 +73,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #B30000; /* Darker red color for buttons on hover */
+    background-color: #B30000;
 }
 
 .about, .academics, .admissions, .contact {
@@ -96,7 +89,7 @@ body {
 .admissions h2,
 .contact h2 {
     font-size: 24px;
-    color: #FF0000; /* Red color for headings */
+    color: #FF0000; 
     margin-bottom: 20px;
 }
 
@@ -111,7 +104,7 @@ body {
 
 .footer {
     text-align: center;
-    background-color: #333;
+    background-color: #0c0c0c;
     color: #fff;
     padding: 10px 0;
 }
