@@ -7,69 +7,95 @@
     <title>Bharath Institute of Higher Education and Research</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/c/cb/Bharath_University_Logo.png">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 
 <style>
-    
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
+        background-color: #FFCCCC;
     }
 
     .navbar {
-        overflow: hidden;
-        
+        background-color: #f30606; 
     }
 
+    .navbar-toggler-icon {
+        background-image: url("data:image/png;base64,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");
+    }
+
+    .navbar-nav {
+        text-align: center; 
+    }
+    
+
     .navbar a {
-        float:left;
         font-size: 16px;
         color: black;
-        text-align: center;
+        text-align: left;
         padding: 14px 16px;
         text-decoration: none;
-
     }
 
     .navbar a:hover {
-        background-color:white;
+        background-color: white;
         border-radius: 10px;
-        
-        
     }
+    .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF0000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #B30000;
+    
+}
 
     @media screen and (max-width: 600px) {
-        .navbar a {
-            float: none;
-            display: block;
+        .navbar-nav {
             text-align: left;
         }
     }
 </style>
-</head>
 
 <body>
-<header class="header">
-    <div class="container">
-        <div class="navbar">
-            <a href="bharath_home.html">Home</a>
-            <a href="bharath_school_page.html">School</a>
-            <a href="bharath_college.html">College</a>
-            <a href="about.html">About</a>
-            
-            
-            
-           
-        </div>
-    </div>
-</header>
 
+    
+    <nav class="navbar navbar-expand-lg">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item ">
+                    <a class="nav-link" href="bharath_home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bharath_school_page.html">School</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bharath_college.html">College</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <section class="hero">
         <div class="container">
             <h1>Welcome to Bharath Institute of Higher Education and Research</h1>
@@ -111,8 +137,9 @@
         </div>
     </section>
    
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
