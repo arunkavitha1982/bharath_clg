@@ -5,80 +5,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bharath Institute of Higher Education and Research</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/c/cb/Bharath_University_Logo.png">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+    <link rel="stylesheet" href="about2.css">
+    <link rel="icon" href="images/My profile.jpg">
 
+
+</head>
 <style>
     body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        background-color: #FFCCCC;
     }
 
     .navbar {
-        background-color: #f30606; 
-    }
+        overflow: hidden;
 
-    .navbar-toggler-icon {
-        background-image: url("data:image/png;base64,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");
     }
-
-    .navbar-nav {
-        text-align: center; 
-    }
-    
 
     .navbar a {
+        float: left;
         font-size: 16px;
         color: black;
-        text-align: left;
+        text-align: center;
         padding: 14px 16px;
         text-decoration: none;
     }
 
     .navbar a:hover {
-        background-color: white;
+        background-color: red;
+        color: white;
+        padding: auto;
         border-radius: 10px;
-    }
-    .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #FF0000;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #B30000;
-    
-}
-
-    @media screen and (max-width: 600px) {
-        .navbar-nav {
-            text-align: left;
-        }
     }
 </style>
 
 <body>
 
-    
-    <nav class="navbar navbar-expand-lg">
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-
-        
         <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item ">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
                     <a class="nav-link" href="bharath_home.html">Home</a>
                 </li>
                 <li class="nav-item">
@@ -87,56 +63,348 @@
                 <li class="nav-item">
                     <a class="nav-link" href="bharath_college.html">College</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item active">
                     <a class="nav-link" href="about.html">About</a>
                 </li>
             </ul>
         </div>
     </nav>
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to Bharath Institute of Higher Education and Research</h1>
-            <p>Your Pathway to Success Begins Here</p>
-            <a href="bharath_college.html" class="btn">Details</a>
-            <a href="https://admission.bharathuniv.ac.in/ahs-application-form" target="_blank" class="btn">Apply Now</a>
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="images/IMG_20230820_193728_0872.jpg" alt="Profile Photo" class="profile-photo">
         </div>
-    </section>
-
-    <section class="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Bharath Institute of Higher Education and Research was founded in 1984 as Bharath Institute of Science
-                and Technology by S. Jagathrakshakan. It is among the first autonomous engineering colleges in Tamil
-                Nadu. It was first affiliated to Madras University followed by Anna University</p>
-        </div>
-    </section>
+        <h1 class="text-center">Thank you for visit my Website</h1>
 
 
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I am Arun Kumar,studying first year,BCA in Bharath college of arts and science,chennai.I am student
+                hope3.org
+            </p>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact Information</h2>
+            <ul class="contact-list">
+                <li>Email: arunkumar.msg@gmail.com</li>
+                <li>Phone: 6381689021</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/arun-kumar-862981293">LinkedIn Profile</a></li>
+                <li>Twitter: <a href="https://twitter.com/Arunkum262005">TwitterHandle</a></li>
+            </ul>
+        </section>
 
-    <section class="admissions">
-        <div class="container">
-            <h2>Admissions</h2>
-            <p>Bharath University Placements FAQs
-                The highest package offered to students placed from Bharath University is 10 LPA. What is the average
-                package offered to students placed from Bharath University? The average package offered to students
-                placed from Bharath University is 3.6 LPA.</p>
-        </div>
-    </section>
 
-    <section class="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Phone number - 044-2245125, 91-44-22290247 , 97106 79499, 91-44-64190949</p>
-            <p>Email - bharath.edu@yahoo.co.in</p>
-            <p>Official Website - www.bharathuniv.in</p>
-            <p>University - Bharath University</p>
-            
-        </div>
-    </section>
-   
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+        <section id="team">
+            <h2 class="section-title" style="text-align: center;">Mentors</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/palani_desk.png" alt="Team Member 1">
+                        <h3>Mr Palaniappan</h3>
+                        <p>Amazon, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/neels_desk.png" alt="Team Member 2">
+                        <h3>Mr Neelakandan Venkataraman</h3>
+                        <p>Microsoft, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/meenakshi_desk.png" alt="Team Member 3">
+                        <h3>Dr Meenakshi Sundaram</h3>
+                        <p>Intel, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/shiva_desk.png" alt="Team Member 4">
+                        <h3>Mr Sivakumar</h3>
+                        <p>Managing Trustee
+                            Hope3 India Foundation</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharath Institute of Higher Education and Research</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="about2.css">
+    <link rel="icon" href="images/My profile.jpg">
+
+
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .navbar {
+        overflow: hidden;
+
+    }
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: black;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    .navbar a:hover {
+        background-color: red;
+        color: white;
+        padding: auto;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="bharath_home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bharath_school_page.html">School</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="bharath_college.html">College</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <img src="images/IMG_20230820_193728_0872.jpg" alt="Profile Photo" class="profile-photo">
+        </div>
+        <h1 class="text-center">Thank you for visit my Website</h1>
+
+
+        <section id="about">
+            <h2 class="section-title">About Me</h2>
+            <p>I am Arun Kumar,studying first year,BCA in Bharath college of arts and science,chennai.I am student
+                hope3.org
+            </p>
+        </section>
+        <section id="contact">
+            <h2 class="section-title">Contact Information</h2>
+            <ul class="contact-list">
+                <li>Email: arunkumar.msg@gmail.com</li>
+                <li>Phone: 6381689021</li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/arun-kumar-862981293">LinkedIn Profile</a></li>
+                <li>Twitter: <a href="https://twitter.com/Arunkum262005">TwitterHandle</a></li>
+            </ul>
+        </section>
+
+
+        <section id="team">
+            <h2 class="section-title" style="text-align: center;">Mentors</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/palani_desk.png" alt="Team Member 1">
+                        <h3>Mr Palaniappan</h3>
+                        <p>Amazon, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/neels_desk.png" alt="Team Member 2">
+                        <h3>Mr Neelakandan Venkataraman</h3>
+                        <p>Microsoft, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/meenakshi_desk.png" alt="Team Member 3">
+                        <h3>Dr Meenakshi Sundaram</h3>
+                        <p>Intel, USA</p>
+
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="team-member">
+                        <img src="https://www.hope3.org/images/shiva_desk.png" alt="Team Member 4">
+                        <h3>Mr Sivakumar</h3>
+                        <p>Managing Trustee
+                            Hope3 India Foundation</p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <section>
+                <div class="container">
+                    <h2 style="text-align: center;">Team</h2>
+                    <div id="team-carousel" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+            
+                            <!-- Carousel Item 1 -->
+                            <div class="carousel-item active">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="team-member">
+                                            <img src="images/sakthi3.png" alt="Team Member 7">
+                                            <h3>Sakthiprasath</h3>
+                                            <p>First year BCA from TAGORE, Chennai</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-3">
+                                        <div class="team-member">
+                                            <img src="images/surya2.png" alt="Team Member 8">
+                                            <h3>Surya</h3>
+                                            <p>First year BCA from TAGORE, Chennai</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Add more items here with the same structure -->
+                                </div>
+                            </div>
+            
+                            <!-- Carousel Item 2 -->
+                            <div class="carousel-item">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="team-member">
+                                            <img src="images/maaz4.png" alt="Team Member 8">
+                                            <h3>Maaz</h3>
+                                            <p>First year BCA from TAGORE, Chennai</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="team-member">
+                                            <img src="images/maaz4.png" alt="Team Member 8">
+                                            <h3>Maaz</h3>
+                                            <p>First year BCA from TAGORE, Chennai</p>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-md-3">
+                                        <div class="team-member">
+                                            <img src="images/ram2.png" alt="Team Member 8">
+                                            <h3>Ram</h3>
+                                            <p>First year BCA from TAGORE, Chennai</p>
+                                        </div>
+                                    </div>
+            
+                                    <!-- Add more items here with the same structure -->
+                                </div>
+                            </div>
+            
+                            <!-- Add more carousel items as needed -->
+            
+                        </div>
+            
+                        <!-- Carousel Controls -->
+                        <a class="carousel-control-prev" href="#team-carousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#team-carousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            
+        </section>
+
+
+
+
+
+
+
+        <div class="social-icons" style="text-align: center;">
+            <a href="https://www.instagram.com/i_am_a_rocker/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100054511256281&mibextid=ZbWKwL" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/Arunkum262005" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arun-kumar-862981293" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+
+
+
+    </div>
+</body>
+
+</html>
+        </section>
+
+
+
+
+
+
+
+        <div class="social-icons" style="text-align: center;">
+            <a href="https://www.instagram.com/i_am_a_rocker/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100054511256281&mibextid=ZbWKwL" target="_blank">
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a href="https://twitter.com/Arunkum262005" target="_blank">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/arun-kumar-862981293" target="_blank">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+
+
+
+
+    </div>
 </body>
 
 </html>
