@@ -4,7 +4,7 @@ body {
 }
 
 .header {
-    background-color: red;
+    background-color: #f40303e8;
     color: #fff;
     padding: 20px 0;
 }
@@ -64,7 +64,7 @@ body {
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FF0000;
+    background-color: #f40303e8;
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
@@ -73,7 +73,8 @@ body {
 }
 
 .btn:hover {
-    background-color: #B30000;
+    background-color: #b30000df;
+    color: black;
     
 }
 
@@ -90,7 +91,7 @@ body {
 .admissions h2,
 .contact h2 {
     font-size: 24px;
-    color: #FF0000; 
+    color: #f40303e8; 
     margin-bottom: 20px;
 }
 
